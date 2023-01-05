@@ -1,0 +1,10 @@
+.stats {
+    text-align: center;
+    overflow: auto;
+    border-style: solid;
+}
+
+.button {
+    margin: 10px 40px;
+    width: 110px;
+}

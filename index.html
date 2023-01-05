@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skyrim Strategy</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <h2>Skyrim Map</h2>
+        <div class="map" style="float: left;">
+            <img src="images/pikrepo.jpg" width="1280" height="930" usemap="#cities">
+            <map name="cities">
+                <area shape="rect" coords="396,119,430,161" href="cities/solitude.html" alt="Solitude">
+                <area shape="rect" coords="64,441,97,483" href="cities/markarth.html" alt="Markarth">
+                <area shape="rect" coords="495,257,528,299" href="cities/morthal.html" alt="Morthal">
+                <area shape="rect" coords="717,122,749,167" href="cities/dawnstar.html" alt="Dawnstar">
+                <area shape="rect" coords="690,459,722,511" href="cities/whiterun.html" alt="Whiterun">
+                <area shape="rect" coords="520,734,554,785" href="cities/falkreath.html" alt="Falkreath">
+                <area shape="rect" coords="962,138,996,180" href="cities/winterhold.html" alt="Winterhold">
+                <area shape="rect" coords="1021,329,1053,376" href="cities/windhelm.html" alt="Windhelm">
+                <area shape="rect" coords="1173,758,1207,804" href="cities/riften.html" alt="Riften">
+            </map>
+        </div>
+
+        <div class="stats">
+            <h2>Name of Empire</h2>
+
+            <div id="options">
+                    <button id="economy_button" class="button">Economy</button>
+                    <button id="army_button" class="button">Army</button>
+                    <button class="button">Yes</button>
+        </div>
+
+        <div style="display: none;" id="economy_stats">
+            <p>Dinero: </p>
+            <p>Construccion: </p>
+            <p>Gastos: </p>
+        </div>
+
+        <div style="display: none;" id="army_stats">
+            <p>Ejercito: </p>
+            <p>Suministro: </p>
+            <p>Poder: </p>
+        </div>
+
+    </body>
+    <script src="stats.js"></script>
+</html>

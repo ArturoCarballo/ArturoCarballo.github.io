@@ -1,0 +1,76 @@
+.stats {
+    text-align: center;
+    overflow: auto;
+    border-style: solid;
+}
+
+.button {
+    margin: 10px 40px;
+    width: 110px;
+}
+
+.e_stats_style {
+    display: block;
+    height: auto;
+    max-height: 740px;
+}
+
+.buildings {
+    border-style: double; 
+    margin: 50px;
+    height: 120px;
+    width: 495px;
+}
+
+.buildings_image {
+    position: relative;
+    left: -145px;
+    padding-top: 3px;
+}
+
+.building_name {
+    text-align: start;
+    width: 275px;
+    height: 115px;
+    position: relative;
+    right: -220px;
+    top: -135px;
+}
+
+.building_level {
+    text-align: start;
+    width: 275px;
+    height: 90px;
+    position: relative;
+    right: -220px;
+    top: -240px;
+}
+
+.building_income {
+    text-align: start;
+    width: 275px;
+    height: 60px;
+    position: relative;
+    right: -220px;
+    top: -320px;
+}
+
+.building_upgrade {
+    text-align: start;
+    position: relative;
+    text-align: center;
+    width: 80px;
+    height: 35px;
+    right: -190px;
+    top: -378px;
+}
+
+.building_upgrade_cost {
+    text-align: start;
+    position: relative;
+    text-align: center;
+    width: 80px;
+    height: 35px;
+    right: -400px;
+    top: -450px;
+}
