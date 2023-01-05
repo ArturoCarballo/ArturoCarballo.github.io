@@ -16,7 +16,9 @@
             <div id="options">
                 <button id="economy_button" class="button">Economy</button>
                 <button id="army_button" class="button">Army</button>
-                <button class="button">Yes</button>
+                <button id="society_button" class="button">Society</button>
+                <button id="general_stats_button" class="button">General Stats</button>
+
             </div>
 
     <div class="e_stats_style" id="economy_stats">
@@ -24,8 +26,8 @@
             <img src="/images/Whiterun_Skyrim_Market.jpg" width="200" height="114" class="buildings_image">
             
             <h3 class="building_name">Market</h3>
-            <p class="building_level">Level</p>
-            <p class="building_income">Income</p>
+            <p class="building_level">Level: <var id="level_market">0</var></p>
+            <p class="building_income">Income: <var id="income_market">0</var></p>
             <button class="building_upgrade">Upgrade</button>
             <p class="building_upgrade_cost">Cost: 100</p>
         </div>
@@ -34,8 +36,8 @@
             <img src="/images/Whiterun_Skyrim_Blacksmith.jpg" width="200" height="114" class="buildings_image">
             
             <h3 class="building_name">Blacksmith</h3>
-            <p class="building_level">Level</p>
-            <p class="building_income">Income</p>
+            <p class="building_level">Level: <var id="level_blacksmith">0</var></p>
+            <p class="building_income">Income: <var id="income_blacksmith">0</var></p>
             <button class="building_upgrade">Upgrade</button>
             <p class="building_upgrade_cost">Cost: 100</p>
         </div>
@@ -44,19 +46,65 @@
             <img src="/images/Whiterun_Skyrim_Inn.jpg" width="200" height="114" class="buildings_image">
             
             <h3 class="building_name">Inn</h3>
-            <p class="building_level">Level</p>
-            <p class="building_income">Income</p>
+            <p class="building_level">Level: <var id="level_inn">0</var></p>
+            <p class="building_income">Income: <var id="income_inn">0</var></p>
             <button class="building_upgrade">Upgrade</button>
             <p class="building_upgrade_cost">Cost: 100</p>
         </div>
     </div>
 
-    <div style="display: none;" id="army_stats">
-        <p>Ejercito: </p>
-        <p>Suministro: </p>
-        <p>Poder: </p>
+    <div class="a_stats_style" id="army_stats">
+        <div class="buildings">
+            <img src="/images/Whiterun_Skyrim_Jorrvaskr.jpg" width="200" height="114" class="buildings_image">
+            
+            <h3 class="building_name">Jorrvaskr</h3>
+            <p class="building_level">Level: <var id="level_jorrvaskr">0</var></p>
+            <p class="building_income">Army: <var id="army_jorrvaskr">0</var></p>
+            <button class="building_upgrade">Upgrade</button>
+            <p class="building_upgrade_cost">Cost: 100</p>
+        </div>
+
+        <div class="buildings">
+            <img src="/images/Whiterun_Skyrim_Barracks.jpg" width="200" height="114" class="buildings_image">
+            
+            <h3 class="building_name">Barracks</h3>
+            <p class="building_level">Level: <var id="level_barracks">0</var></p>
+            <p class="building_income">Army: <var id="army_barracks">0</var></p>
+            <button class="building_upgrade">Upgrade</button>
+            <p class="building_upgrade_cost">Cost: 100</p>
+        </div>
     </div>
 
+    <div class="s_stats_style" id="society_stats">
+        <div class="buildings">
+            <img src="/images/Whiterun_Skyrim_Temple_of_Kynareth.jpg" width="200" height="114" class="buildings_image">
+            
+            <h3 class="building_name">Temple of Kynareth</h3>
+            <p class="building_level">Level: <var id="level_Temple_Kynareth">0</var></p>
+            <p class="building_income">No se que ponr ayudammm: <var id="NOSEM">0</var></p>
+            <button class="building_upgrade">Upgrade</button>
+            <p class="building_upgrade_cost">Cost: 100</p>
+        </div>
+
+        <div class="buildings">
+            <img src="/images/Whiterun_Skyrim_Dragonsreach.jpg" width="200" height="114" class="buildings_image">
+            
+            <h3 class="building_name">Dragonsreach</h3>
+            <p class="building_level">Level: <var id="level_Dragonsreach">0</var></p>
+            <p class="building_income">No se que ponr ayudammm: <var id="NOSEM">0</var></p>
+            <button class="building_upgrade">Upgrade</button>
+            <p class="building_upgrade_cost">Cost: 100</p>
+        </div>
+    </div>
+    
+    <div class="general_stats_style" id="general_stats">
+        <div>
+            <p>Population</p>
+            <p>Army</p>
+            <p>Gold</p>
+        </div>
+    </div>
 </body>
 <script src="stats.js"></script>
+<script src="cities_scripts/whiterun_stats.js"></script>
 </html>

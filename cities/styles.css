@@ -15,6 +15,24 @@
     max-height: 740px;
 }
 
+.a_stats_style {
+    display: block;
+    height: auto;
+    max-height: 740px;
+}
+
+.s_stats_style {
+    display: block;
+    height: auto;
+    max-height: 740px;
+}
+
+.gs_stats_style {
+    display: block;
+    height: auto;
+    max-height: 740px;
+}
+
 .buildings {
     border-style: double; 
     margin: 50px;
