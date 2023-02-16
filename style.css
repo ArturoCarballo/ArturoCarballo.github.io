@@ -133,3 +133,41 @@ body {
     right: -290px;
     font-size: 30px;
 }
+
+.tab_military {
+    left: 50%;
+    color: white;
+    text-align-last: center;
+}
+
+.tab_military p {
+    font-size: 20px;
+}
+
+.decisions {
+    border-style:solid;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.decision_name {
+    font-size: 25px;
+}
+
+.decision_button {
+    width: 200px;
+    height: 80px;
+    font-size: 20px;
+}
+
+.tab_social {
+    left: 50%;
+    color: white;
+    text-align-last: center;
+}
+
+.tab_social p {
+    font-size: 20px;
+}

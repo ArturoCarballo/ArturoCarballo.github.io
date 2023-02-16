@@ -19,6 +19,15 @@ factory_income = document.getElementById("income_factory");
 factory_level = document.getElementById("level_factory");
 factory_cost = document.getElementById("cost_factory");
 
+// Global variables
+budget_gain_int = replace_sign(budget_gain);
+budget_int = parseInt(budget.innerHTML);
+
+buttons = document.getElementsByTagName("button");
+
+// Change initial colors
+change_color(budget_gain);
+
 //Functions for clicking //
 function onclick_end_turn() {
     change_values_endturn();
@@ -29,6 +38,8 @@ function onclick_upgrade_market() {
     market_level_int = parseInt(market_level.innerHTML);
     market_cost_int = parseInt(market_cost.innerHTML);
     budget_int = parseInt(budget.innerHTML);
+    market_income_per_int = replace_sign(market_income_per);
+    
 
     // Check if it has enough money
     if(market_cost_int > budget_int) {
@@ -48,13 +59,19 @@ function onclick_upgrade_market() {
     market_level.innerHTML = market_level_int.toString();
     market_cost.innerHTML = market_cost_int.toString();
     budget.innerHTML = budget_int.toString();
+
+    change_color(market_income_per);
+    change_color(market_income);
+
+    upgrade_market_button.disabled = true; // Disable buttons
 }
 
 function onclick_upgrade_factory() {
     factory_income_int = parseInt(factory_income.innerHTML); // Gets int from the innerhtml
     factory_level_int = parseInt(factory_level.innerHTML);
+    factory_income_per_int = replace_sign(factory_income_per);
+    factory_income_int = replace_sign(factory_income);
     factory_cost_int = parseInt(factory_cost.innerHTML);
-    budget_int = parseInt(budget.innerHTML);
 
     // Check if it has enough money
     if(factory_cost_int > budget_int) {
@@ -74,6 +91,11 @@ function onclick_upgrade_factory() {
     factory_level.innerHTML = factory_level_int.toString();
     factory_cost.innerHTML = factory_cost_int.toString();
     budget.innerHTML = budget_int.toString();
+
+    change_color(factory_income);
+    change_color(factory_income_per);
+
+    upgrade_factory_button.disabled = true; // Disable buttons
 }
 
 // Function that replaces sign
@@ -87,25 +109,13 @@ function replace_sign(number) {
 }
 
 // Replace color //
-budget_gain_int = replace_sign(budget_gain);
-
-market_income_per_int = replace_sign(market_income_per);
-market_income_int = replace_sign(market_income);
-
-factory_income_per_int = replace_sign(factory_income_per);
-factory_income_int = replace_sign(factory_income);
-if(budget_gain_int >= 1 || market_income_per_int >= 1 || market_income_int >= 1 || factory_income_per_int >= 1 || factory_income_int >= 1) {
-    budget_gain.style.color = "MediumSeaGreen";
-
-    market_income_per.style.color = "MediumSeaGreen";
-    market_income.style.color = "MediumSeaGreen";
-
-    factory_income_per.style.color = "MediumSeaGreen";
-    factory_income.style.color = "MediumSeaGreen";
-} else if(budget_gain_int <= -1 || market_income_per_int <= -1 || market_income_int <= -1 || factory_income_per_int >= 1 || factory_income_int >= 1) {
-    budget_gain.style.color = "Tomato";
-    factory_income_per.style.color = "Tomato";
-    factory_income.style.color = "Tomato";
+function change_color(element) {
+    element_int = replace_sign(element);
+    if(element_int >= 1) {
+        element.style.color = "MediumSeaGreen";
+    } else if(element_int <= -1) {
+        element.style.color = "Tomato";
+    }
 }
 
 // Update Value
@@ -113,7 +123,14 @@ function change_values_endturn() {
     budget_int = parseInt(budget.innerHTML);
     budget_int += budget_gain_int;
 
+    change_color(budget_gain);
+
     budget.innerHTML = budget_int.toString();
+
+    // Enable buttons
+    for(var i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = false;
+    }
 }
 
 

@@ -5,14 +5,14 @@
         <div class="topmenu">
             <b class="active" id="economy">Economy</b>
             <b id="military">Military</b>
-            <b id="society">Society</b>
+            <b id="social">Social</b>
         </div>
 
         <button id="end_turn" class="end_turn_button">End turn</button>
         <b class="date">Year: <var id="year">1 </var></b>
         <b class="date_m">Month: <var id="month">1</var></b>
         <div class="tab_economy" id="tab_economy">
-            <h1>Minister of Economy</h1>
+            <h1>Ministry of Economy</h1>
             <img src="images/MinisterOfEconomy.png" width="210" height="200">
             <p>Budget: <var id="budget">100</var> <var id="budget_gain">+1</var></p>
 
@@ -36,7 +36,30 @@
                 <p class="building_upgrade_cost">Cost: <var id="cost_factory">200</var></p>
             </div>
         </div>
+
+        <div class="tab_military" id="tab_military">
+            <h1>Ministry of Security</h1>
+            <img src="images/MinisterOfEconomy.png" width="210" height="200">
+            <p>Infantry: <var id="infantry">100</var> <var id="infantry_gain">+1</var></p>
+
+            <div class="decisions">
+                <b class="decision_name">Mass Recruitment</b>
+                <p>Infantry: <var id="mr_infantry_growth" style="color: mediumseagreen;">+100</var></p>
+                <p>Population: <var id="mr_population_loss" style="color: tomato;">-100</var></p>
+                <p>Happines: <var id="mr_happines_loss" style="color: tomato;">-30%</var></p>
+                <button class="decision_button" id="mr_button">Legislate</button>
+            </div>
+        </div>
+
+        <div class="tab_social" id="tab_social">
+            <h1>Ministry of Nation</h1>
+            <img src="images/MinisterOfEconomy.png" width="210" height="200">
+            <p>Population: <var id="population">1000</var> <var id="population_gain">+1</var></p>
+            <p>Happines: <var id="happines">100%</var></p>
     </body>
     <script src="menu.js"></script>
     <script src="economy.js"></script>
+    <script src="military.js"></script>
+    <script src="social.js"></script>
+
 </html>
