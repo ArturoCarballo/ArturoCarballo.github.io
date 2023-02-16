@@ -3,12 +3,11 @@ menu_economy = document.getElementById("economy");
 menu_military = document.getElementById("military");
 menu_society = document.getElementById("society");
 end_turn_button = document.getElementById("end_turn");
+tab_economy = document.getElementById("tab_economy");
 
 // Variables //
 month = document.getElementById("month");
 year = document.getElementById("year");
-budget = document.getElementById("budget");
-budget_gain = document.getElementById("budget_gain");
 
 //Functions for clicking //
 function onclick_economy() {
@@ -16,6 +15,8 @@ function onclick_economy() {
     // Deactivate others
     menu_military.className -= "active";
     menu_society.className -= "active";
+
+    show(tab_economy);
 }
 
 function onclick_military() {
@@ -23,6 +24,8 @@ function onclick_military() {
     // Deactivate others
     menu_economy.className -= "active";
     menu_society.className -= "active";
+
+    hide(tab_economy);
 }
 
 function onclick_society() {
@@ -42,8 +45,17 @@ function onclick_end_turn() {
     }
     month.innerHTML = month_int.toString(); // Changes the html
     year.innerHTML = year_int.toString();
+}
 
-    change_values();
+// Menu config //
+// Function to show div
+function show(category) {
+    category.style.display = "block";
+}
+
+// Function to hide div
+function hide(category) {
+    category.style.display = "none";
 }
 
 // Mechanics //
@@ -54,31 +66,6 @@ function check_month(month){
     else {
         return false;
     }
-}
-
-// Function that replaces sign
-function replace_sign(number) {
-    number_string = number.innerHTML;
-    if(number_string.indexOf('-') > -1) { // If the number is negative, dont erase the -
-        return parseInt(number_string)
-    }
-    number_string = number_string.replace(/[^\d.]/g, '' ); // Get rid of +
-    return parseInt(number_string);
-}
-
-// Replace color
-budget_gain_int = replace_sign(budget_gain);
-if(budget_gain_int >= 1) {
-    budget_gain.style.color = "MediumSeaGreen";
-} else if(budget_gain_int <= -1) {
-    budget_gain.style.color = "Tomato";
-}
-
-function change_values() {
-    budget_int = parseInt(budget.innerHTML);
-    budget_int += budget_gain_int;
-
-    budget.innerHTML = budget_int.toString();
 }
 
 // Listeners //

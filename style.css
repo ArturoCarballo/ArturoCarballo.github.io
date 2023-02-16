@@ -77,3 +77,59 @@ body {
     top: 30px;
     color: white;
 }
+
+.buildings {
+    border-style:solid;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-bottom: 50px;
+}
+
+.buildings_image {
+    position: relative;
+    right: 350px;
+}
+
+.building_name {
+    position: relative;
+    top: 40px;
+    right: 300px;
+    font-size: 30px;
+}
+
+.building_level {
+    position: relative;
+    top: 40px;
+    right: 300px;
+    font-size: 30px;
+}
+
+.building_income {
+    position: relative;
+    top: 40px;
+    right: 300px;
+    font-size: 30px;
+}
+
+.building_upgrade {
+    position: relative;
+    top: -50px;
+    right: -290px;
+    font-size: 20px;
+    width: 310px;
+    height: 70px;
+}
+
+.building_upgrade_cost {
+    position: relative;
+    top: -200px;
+    right: -290px;
+    font-size: 30px;
+}
+
+.building_income_per {
+    position: relative;
+    top: 150px;
+    right: -290px;
+    font-size: 30px;
+}
