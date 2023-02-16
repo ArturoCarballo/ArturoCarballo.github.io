@@ -8,6 +8,9 @@
             <b id="social">Social</b>
         </div>
 
+        <var id="is_there_event" style="display: none;">0</var>
+        <var id="event_type" style="display: none;">0</var>
+
         <button id="end_turn" class="end_turn_button">End turn</button>
         <b class="date">Year: <var id="year">1 </var></b>
         <b class="date_m">Month: <var id="month">1</var></b>
@@ -56,10 +59,19 @@
             <img src="images/MinisterOfEconomy.png" width="210" height="200">
             <p>Population: <var id="population">1000</var> <var id="population_gain">+1</var></p>
             <p>Happines: <var id="happines">100%</var></p>
+        </div>
+
+        <div class="alert_2" id="alert_2" style="display: none;">
+            <h1 id="event_2_title">EVENT TITLE</h1>
+            <p>sisisis esa cabron</p>
+            <button class="option1" id="option1">Yes</button>
+            <button class="option2" id="option2">No</button>
+        </div>
     </body>
     <script src="menu.js"></script>
     <script src="economy.js"></script>
     <script src="military.js"></script>
     <script src="social.js"></script>
+    <script src="events.js"></script>
 
 </html>
