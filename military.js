@@ -4,10 +4,21 @@ mr_button = document.getElementById("mr_button"); // Mass recruitment button
 // Variables //
 infantry = document.getElementById("infantry");
 infantry_gain = document.getElementById("infantry_gain");
+army_attack = document.getElementById("army_attack");
+army_defense = document.getElementById("army_defense");
+army_morale = document.getElementById("army_morale");
+
 mr_infantry_growth = document.getElementById("mr_infantry_growth");
 mr_population_loss = document.getElementById("mr_population_loss");
 mr_happines_loss = document.getElementById("mr_happines_loss");
+
 happines = document.getElementById("happines");
+
+// Update variables
+setInterval(change_color_percentage, 1000, army_attack);
+setInterval(change_color_percentage, 1000, army_defense);
+setInterval(change_color_percentage, 1000, army_morale);
+
 
 // Click functions
 function onclick_mr_button() {
@@ -39,6 +50,19 @@ function change_color(element) {
     if(element_int >= 1) {
         element.style.color = "MediumSeaGreen";
     } else if(element_int <= -1) {
+        element.style.color = "Tomato";
+    }
+}
+
+function change_color_percentage(element) {
+    element_int = replace_sign(element);
+    if(element_int >= 66) {
+        element.style.color = "MediumSeaGreen";
+    }
+    if (element_int >= 33 && element_int < 66) {
+        element.style.color = "Orange";
+    }
+    if(element_int < 33) {
         element.style.color = "Tomato";
     }
 }

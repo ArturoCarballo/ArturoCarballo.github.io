@@ -60,6 +60,11 @@ body {
     color: white;
 }
 
+.end_turn_button:disabled {
+    background-color: transparent;
+    color: gray;
+}
+
 .date {
     position: absolute;
     width: 100px;
@@ -180,7 +185,6 @@ body {
     text-align: center;
     background-color: #333;
     color: white;
-    top: -1500px;
 }
 
 .alert_2 h1 {
@@ -207,4 +211,89 @@ body {
     width: 120px;
     height: 50px;
     font-size: 15px;
+}
+
+.event_button {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    right: 10px;
+    top: 120px;
+    background-color: red;
+    border-color: #333;
+    color: white;
+    display: none;
+}
+
+.event_button:hover {
+    cursor: pointer;
+    background-color: #ddd;
+    color: black;
+}
+
+.event_button:active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.effect1 {
+    position: absolute;
+    text-align: center;
+    right: 900px;
+    top: 160px;
+    padding: 10px;
+}
+
+.effect1_desc{
+    position: absolute;
+    text-align: center;
+    right: 840px;
+    top: 240px
+}
+
+.effect2 {
+    position: relative;
+    left: 380px;
+    top: 0px;
+    padding: 10px;
+}
+
+.effect2 p{
+    position: relative;
+    left: 380px;
+    top: -50px;
+}
+
+.battle_menu {
+    position: relative;
+    padding: 20px;
+    margin: 20%;
+    border-style: solid;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.battle_menu h1 {
+    font-weight: bold;
+    border-style: dashed;
+    padding: 15px;
+}
+
+.battle_menu p {
+    font-size: 22px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.normal_button {
+    width: 120px;
+    height: 50px;
+    font-size: 15px;
+    padding: 10px;
+    margin: 20px;
 }

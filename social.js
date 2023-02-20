@@ -8,7 +8,7 @@ happines = document.getElementById("happines");
 
 change_color(population_gain);
 
-setInterval(change_color, 1000, happines);
+setInterval(change_color, 1000, happines); // Updates color of happines
 
 // Functions for click
 function onclick_end_turn() {

@@ -2,7 +2,7 @@
 <html>
     <link rel="stylesheet" href="style.css">
     <body>
-        <div class="topmenu">
+        <div class="topmenu" id="topmenu">
             <b class="active" id="economy">Economy</b>
             <b id="military">Military</b>
             <b id="social">Social</b>
@@ -43,7 +43,10 @@
         <div class="tab_military" id="tab_military">
             <h1>Ministry of Security</h1>
             <img src="images/MinisterOfEconomy.png" width="210" height="200">
-            <p>Infantry: <var id="infantry">100</var> <var id="infantry_gain">+1</var></p>
+            <p>Infantry: <var id="infantry">1000</var> <var id="infantry_gain">+1</var></p>
+            <p>Army attack: <var id="army_attack">10%</var></p>
+            <p>Army defense: <var id="army_defense">5%</var></p>
+            <p>Army morale: <var id="army_morale">80%</var></p>
 
             <div class="decisions">
                 <b class="decision_name">Mass Recruitment</b>
@@ -63,15 +66,53 @@
 
         <div class="alert_2" id="alert_2" style="display: none;">
             <h1 id="event_2_title">EVENT TITLE</h1>
-            <p>sisisis esa cabron</p>
+            <p id="event2_description">sisisis esa cabron<br>ddwdwdwdwdwd<br>dwwdwdw</p>
+            <div>
+                <h2 class="effect1">Effect:</h2>
+                <p class ="effect1_desc" id="effect1_desc">d3ijdwidj3idji3d<br>djidwdi<br>dwdwdwdwd</p>
+            </div>
+            <div>
+                <h2 class="effect2">Effect:</h2>
+                <p class ="effect2" id="effect2_desc">d3ijdwidj3idji3d<br>dwdwdw<br>dqwdwqdqd</p>
+            </div>
             <button class="option1" id="option1">Yes</button>
             <button class="option2" id="option2">No</button>
         </div>
+
+        <div class="battle_menu" id="battle">
+            <h1>Battle:</h1>
+            <div class="grid-container">
+
+                <div class="grid-child">
+                    <h2>Onran Army</h2>
+                    <p>Size: <var id="onra_size">0</var> <var id="onra_army_change" style="visibility: hidden;"> 0</var></p>
+                    <p>Attack: <var id="onra_attack">0</var></p>
+                    <p>Defense: <var id="onra_defense">0</var></p>
+                    <p>Morale: <var id="onra_morale">0</var></p>
+                    <button class="normal_button" id="button_retreat">Retreat</button>
+                </div>
+            
+                <div class="grid-child">
+                    <h2 id="enemy_name">Enemy</h2>
+                    <p>Size: <var id="enemy_size">0</var> <var id="enemy_army_change" style="visibility:hidden"> 0</var></p>
+                    <p>Attack: <var id="enemy_attack">0</var></p>
+                    <p>Defense: <var id="enemy_defense">0</var></p>
+                    <p>Morale: <var id="enemy_morale">0</var></p>
+                    <button class="normal_button" id="button_start">Start Battle</button>
+                </div>
+              
+            </div>
+        </div>
+
+        </div>
+        <button class="event_button" id="event_button">See Event</button>
+
     </body>
     <script src="menu.js"></script>
     <script src="economy.js"></script>
     <script src="military.js"></script>
     <script src="social.js"></script>
     <script src="events.js"></script>
+    <script src="battle.js"></script>
 
 </html>
