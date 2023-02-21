@@ -1,5 +1,6 @@
 // Get elemets by ID //
 mr_button = document.getElementById("mr_button"); // Mass recruitment button
+end_turn_button = document.getElementById("end_turn");
 
 // Variables //
 infantry = document.getElementById("infantry");
@@ -32,6 +33,14 @@ function onclick_mr_button() {
     happines.innerHTML =  (happines_int.toString() + "%");
 
     mr_button.disabled = true; // Disable buttons
+}
+
+function onclick_end_turn() {
+    infantry_int = parseInt(infantry.innerHTML);
+
+    infantry_int += parseInt(infantry_gain.innerHTML);
+
+    infantry.innerHTML = infantry_int.toString();
 }
 
 // Function that replaces sign
@@ -71,3 +80,4 @@ change_color(infantry_gain);
 
 // Listeners //
 mr_button.addEventListener("click", onclick_mr_button);
+end_turn_button.addEventListener("click", onclick_end_turn);

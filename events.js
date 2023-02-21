@@ -7,6 +7,8 @@ effect2_desc = document.getElementById("effect2_desc");
 
 event_button = document.getElementById("event_button");
 
+event_type = document.getElementById("event_type");
+
 alert_2 = document.getElementById("alert_2");
 event_2_option1 = document.getElementById("option1");
 event_2_option2 = document.getElementById("option2");
@@ -23,18 +25,21 @@ event_id = 0;
 
 // Click functions
 function onclick_event_2_option1() {
-    hide(alert_2);
-    event_button.style.display = "none";
-    end_turn_button.disabled = false;
-    show_gui();
+    if(event_id == 1) {
+        hide(alert_2);
+        event_button.style.display = "none";
+        end_turn_button.disabled = false;
+        console.log("Dies");
+        show_gui();
+    }
 
 }
 
 function onclick_event_2_option2() {
-    hide(alert_2);
-    event_button.style.display = "none";
-    end_turn_button.disabled = false;
-    show_gui();
+    if(event_id == 1) {
+        hide(alert_2);
+        event_type.innerHTML = "12";
+    }
 }
 
 function hide_gui() {
@@ -102,7 +107,7 @@ function choose_event(eventID) {
     end_turn_button.disabled = true;
     switch(eventID) {
         case 1:
-            event_id = 2; // Set the global event ID
+            event_id = 1; // Set the global event ID
             // Show info about the event
             event_2_title.innerHTML = "Citizen take up arms";
             event_2_description.innerHTML = "Due to low happines in your government, citizen take up arms and arm themselves";

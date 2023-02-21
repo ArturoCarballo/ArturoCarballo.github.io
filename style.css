@@ -297,3 +297,11 @@ body {
     padding: 10px;
     margin: 20px;
 }
+
+.end_battle {
+    position: relative;
+    top: 260px;
+    left: 500px;
+    width: 120px;
+    height: 50px;
+}
