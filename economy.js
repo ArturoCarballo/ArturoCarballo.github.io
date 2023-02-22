@@ -26,7 +26,10 @@ budget_int = parseInt(budget.innerHTML);
 buttons = document.getElementsByTagName("button");
 
 // Change initial colors
-change_color(budget_gain);
+setInterval(change_color, 1000, budget_gain); // Updates color of budget
+setInterval(change_color, 1000, factory_income_per);
+setInterval(change_color, 1000, market_income_per);
+
 
 //Functions for clicking //
 function onclick_end_turn() {
