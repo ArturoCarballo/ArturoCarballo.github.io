@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#playerCurrency {
+    position: absolute;
+    top:0;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-style: solid;
+    border-color: white;
+    width: 1000px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+#playerCurrency p {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 22px;
+}
+
+#mainActionMenu {
+    background-color: rgba(128, 128, 128, 0.8);
+    border-style: solid;
+    border-color: white;
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+}
+
+#mainActionMenu p {
+    font-size: 28px;
+    padding: 8px;
+}
+
+#mainActionMenu p:hover {
+    color: white;
+}
+
+#toggleMenu {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 10.5%;
+    font-size: 46px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0.5;
+    transition: left 0.3s;
+}
+
+#sideMenu {
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 99vh;
+    transition: left 0.3s;
+}
+
+#sideMenu p {
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+#sideMenu p:hover {
+    color: gray;
+}
+
+#locationMenu {
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 150px;
+}
+
+#locationMenu p:hover {
+    color: white;
+}
+
+.selected {
+    color: white !important;
+}
+
+#dateEndTurn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-style: solid;
+    border-color: white;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+
+    font-size: 18px;
+}
+
+#inventoryMenu {
+    background-color: black;
+}
+
+#statisticsMenu {
+    background-color: green;
+}
+
+
